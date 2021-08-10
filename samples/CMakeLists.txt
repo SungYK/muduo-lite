@@ -1,0 +1,2 @@
+add_executable(fibonacciServer fibonacciServer.cpp)
+target_link_libraries(fibonacciServer muduo_net muduo_base)
