@@ -46,8 +46,8 @@ target_link_libraries(buffer_test muduo_net muduo_base)
 add_executable(tcpConnection_test TcpConnection_test.cpp)
 target_link_libraries(tcpConnection_test muduo_net muduo_base)
 
-# add_executable(tcpServer_single_io_test TcpServer_single_io_test.cpp)
-# target_link_libraries(tcpServer_single_io_test muduo_net muduo_base)
+add_executable(tcpServer_single_io_test TcpServer_single_io_test.cpp)
+target_link_libraries(tcpServer_single_io_test muduo_net muduo_base)
 
 add_executable(tcpServer_test TcpServer_test.cpp)
 target_link_libraries(tcpServer_test muduo_net muduo_base)

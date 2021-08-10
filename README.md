@@ -30,6 +30,30 @@ src
     |-- TcpServer.{h,cc} TCP 服务端
     |-- Timer.{h,cc} 以下几个文件与定时器回调相关
     \-- TimerQueue.{h,cc}
+\-- tests 为每个类编写的测试用例
+    |-- Timestamp_test.cpp
+    |-- Thread_test.cpp
+    |-- Mutex_test.cpp
+    |-- Condition_test.cpp
+    |-- CountDownLatch_test.cpp
+    |-- BlockingQueue_test.cpp
+    |-- ThreadPool_test.cpp
+    |-- Timer_test.cpp
+    |-- EventLoop_test_1.cpp 
+    |-- EventLoop_test_2.cpp 测试基本 EventLoop.poll() Poller.poll() 以及 Channel 关注 fd 事件及回调
+    |-- EventLoop_test_3.cpp 测试在 IO 线程中执行其他任务，测试唤醒 poll 阻塞，测试跨线程调用在 IO 线程中执行其他任务
+    |-- EventLoop_test_4.cpp 测试 TimerQueue
+    |-- Socket_test.cpp
+    |-- Acceptor_test.cpp
+    |-- Buffer_test.cpp
+    |-- TcpConnection_test.cpp
+    |-- TcpServer_single_io_test 单 IO 线程服务器测试
+    |-- TcpServer_test.cpp 多 IO 线程服务器测试
+    |-- TcpServer_test_2.cpp 测试服务器关闭写连接
+    \-- TcpServer_test_3 chargen 服务器
+
+\-- samples
+    \-- fibonacciServer.cpp 一个 One loop per thread + threadpool 服务器实例，用递归斐波那契数列模拟计算密集型任务，测试并发
 ``` 
 
 # 笔记（updating）
